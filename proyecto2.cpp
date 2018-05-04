@@ -190,8 +190,46 @@ void  metodo_circulos(int x1,int x2,int y1,int y2,int w1,int w2,int z1,int z2){
 
 
 }
-void ejercicio1(){
+void ejercicio3(){
+       int  num;
+	cout<<"ingrese el numero :"<<endl;
+	cin>>num;
 
+	int suma_dig;
+	int rem;
+	int temp=num;
+	while(	temp>0){
+		rem=temp%10;
+		suma_dig+=rem;
+		temp=temp=10;
+	
+	
+	}
+
+
+
+	if(num%suma_dig==0){
+	cout<<num+" es numero harshad"<<endl;
+
+	}else{
+   cout<< num +"no es numero harshad"<<endl;
+	}	   
+
+int r=num/suma_dig;
+int a=0;
+for(int s=1;s<(r+1);s++){
+         if(r%s==0){
+             a++;
+            }
+}
+         if(a!=2){
+              cout<<"No es Primo, no es numero harshad";
+            }else{
+                cout<<"Si es Primo,si es numero harshad";
+         }
+}
+
+void ejercicio1(){
 }
 
 
