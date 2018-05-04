@@ -9,6 +9,7 @@ using namespace std;
 void ejercicio2();
 void ejercicio1();
 void ejercicio3();
+int recursivo(int,int);
 void metodo_circulos(int,int,int,int,int,int,int,int);
 
 
@@ -198,22 +199,16 @@ void ejercicio3(){
 	int suma_dig;
 	int rem;
 	int temp=num;
+
 	while(	temp>0){
 		rem=temp%10;
 		suma_dig+=rem;
-		temp=temp=10;
+		temp=temp/10;
 	
 	
 	}
 
-
-
-	if(num%suma_dig==0){
-	cout<<num+" es numero harshad"<<endl;
-
-	}else{
-   cout<< num +"no es numero harshad"<<endl;
-	}	   
+	   
 
 int r=num/suma_dig;
 int a=0;
@@ -223,10 +218,20 @@ for(int s=1;s<(r+1);s++){
             }
 }
          if(a!=2){
-              cout<<"No es Primo, no es numero harshad";
+      cout<<"No es Primo, no es numero harshad"<<endl;
             }else{
-                cout<<"Si es Primo,si es numero harshad";
+	cout<<"Si es Primo,si es numero harshad"<<endl;
          }
+}
+
+int recursivo(int x,int suma){
+if(x<0){
+return 0;
+
+}else{
+	return suma+recursivo( x/10,suma);
+}
+
 }
 
 void ejercicio1(){
